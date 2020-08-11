@@ -1,14 +1,13 @@
-#page-sigin {
+#page-signin {
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: left;
     align-items: center;    
     overflow: overlay;
-    color: var(--color-text-in-primary);
 }
 
-#page-sigin-background {
+#page-signin-background {
     height: 100vh;
     width: 55vw;
     display: flex;
@@ -16,9 +15,10 @@
     align-items: center;    
     text-align: left;
     background: var(--color-primary);
+    color: var(--color-text-in-primary);
 }
 
-#page-sigin-background #background-image {
+#page-signin-background #background-image {
     width: 100%;
     height: 100%;
 }
@@ -36,3 +36,29 @@
 #logo-image img {
     width: 100%;
 }
+
+#page-signin-login {
+    height: 100vh;
+    width: 45vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page-signin-login-form {
+    width: 60%;
+}
+
+#page-signin-login-form h1 {
+    color: var(--color-text-title);
+    margin-bottom: 2.4rem;
+}
+
+/* #login-form-password {
+    background-image: url(../../assets/images/icons/eye.svg);
+    background-color: var(--color-input-background);
+    background-position: calc(100% - 1rem);
+    background-repeat: no-repeat;
+    background-size: 4rem;
+    background-blend-mode: overlay;
+} */
