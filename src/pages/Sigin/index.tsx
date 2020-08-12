@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FormEvent } from 'react';
 import './styles.css';
 import successBackgroundImg from '../../assets/images/success-background.svg';
 import logoImg from '../../assets/images/logo.svg';
@@ -6,6 +6,10 @@ import InputLogin from '../../components/Input Login';
 import CheckBox from '../../components/Checkbox';
 
 function Sigin() {
+    function login(e: FormEvent) {
+        let a = 1;
+    }
+
     return (
         <div id="page-signin">
             <div id="page-signin-background">
@@ -22,10 +26,18 @@ function Sigin() {
 
             <div id="page-signin-login">
                 <div id="page-signin-login-form">
-                    <h1>Fazer login</h1>
-                    <InputLogin type="email" name="login-form-email" placeholder="E-mail"></InputLogin>
-                    <InputLogin type="password" name="login-form-password" placeholder="Senha"></InputLogin>
-                    <CheckBox name="login-form-remember" label="Lembrar-me" />
+                    <form onSubmit={login}>
+                        <h1>Fazer login</h1>
+                        <InputLogin name="login-form-email" placeholder="E-mail" />
+                        <InputLogin name="login-form-password" password={true} placeholder="Senha" />
+                        <div id="page-signin-options">
+                            <CheckBox name="login-form-remember" label="Lembrar-me" />
+                            <a href="#">Esqueci minha senha</a>
+                        </div>
+                        <button type="submit">
+                            Entrar
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
