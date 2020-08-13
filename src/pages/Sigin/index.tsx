@@ -4,6 +4,7 @@ import successBackgroundImg from '../../assets/images/success-background.svg';
 import logoImg from '../../assets/images/logo.svg';
 import InputLogin from '../../components/Input Login';
 import CheckBox from '../../components/Checkbox';
+import purpleHeartIcon from '../../assets/images/icons/purple-heart.svg';
 
 function Sigin() {
     function login(e: FormEvent) {
@@ -37,6 +38,18 @@ function Sigin() {
                         <button type="submit">
                             Entrar
                         </button>
+                        <footer>
+                            <div id="page-signin-footer">
+                                <div id="footer-right">
+                                    <p>Não tem conta?</p>
+                                    <a href="#">Cadastre-se</a>
+                                </div>
+                                <div id="footer-left">
+                                    <p>É de graça</p>
+                                    <img src={purpleHeartIcon} />
+                                </div>
+                            </div>
+                        </footer>
                     </form>
                 </div>
             </div>

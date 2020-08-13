@@ -4,7 +4,6 @@
     display: flex;
     justify-content: left;
     align-items: center;
-    overflow: overlay;
 }
 
 #page-signin-background {
@@ -18,7 +17,7 @@
     color: var(--color-text-in-primary);
 }
 
-#page-signin-background #background-image {
+#background-image {
     width: 100%;
     height: 100%;
 }
@@ -47,6 +46,10 @@
 
 #page-signin-login-form {
     width: 60%;
+}
+
+#page-signin-login-form form {
+    height: 100%;
 }
 
 #page-signin-login-form h1 {
@@ -99,4 +102,71 @@
     text-decoration: none;
     transition: background-color 0.2s;
     margin-top: 3.2rem;
+}
+
+#page-signin-login-form footer {
+    position: absolute;
+    bottom: 3.5rem;
+    width: 27vw;
+}
+
+#page-signin-footer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+#page-signin-login-form footer a {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+#page-signin-options a:link {
+    text-decoration: none;
+    color: var(--color-text-complement);
+}
+
+#page-signin-options a:hover {
+    text-decoration: underline;
+    color: var(--color-text-complement);
+}
+
+#page-signin-options a:visited {
+    text-decoration: none;
+    color: var(--color-text-complement);
+}
+
+#page-signin-options a:active {
+    text-decoration: underline;
+    color: var(--color-text-complement);
+}
+
+@media (max-height: 552px) {
+    #page-signin-login-form footer {
+        position: relative;
+        top: 3.5rem;
+    }
+}
+
+@media (max-height: 450px) {
+    #page-signin {
+        display: inline-block;
+    }
+
+    #page-signin-background {
+        width: 100%;
+        height: 30rem;
+    }
+}
+
+#footer-left {
+    display: flex;
+    justify-content: left;
+    font-size: 1.2rem;
+    padding-top: 0.8rem;
+}
+
+#footer-left img {
+    height: 1rem;
+    margin: 0.4rem 0.8rem;
 }
